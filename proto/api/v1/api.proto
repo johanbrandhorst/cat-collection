@@ -1,0 +1,39 @@
+syntax="proto3";
+
+package catcollection.api.v1;
+
+option go_package = "github.com/johanbrandhorst/cat-collection/service/proto/api/v1;api";
+
+service CatService {
+    rpc ListCats(ListCatsRequest) returns(ListCatsResponse) {}
+    rpc GetFeaturedCats(GetFeaturedCatsRequest) returns (GetFeaturedCatsResponse) {}
+    rpc CreateCat(CreateCatRequest) returns (Cat) {}
+    rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+}
+
+message Cat {
+    string name = 1;
+    string image_url = 2;
+}
+
+message ListCatsRequest {}
+
+message ListCatsResponse {
+    repeated Cat cats = 1;
+}
+
+message GetFeaturedCatsRequest {}
+
+message GetFeaturedCatsResponse {
+    repeated Cat cats = 1;
+}
+
+message CreateCatRequest {
+    string name = 1;
+}
+
+message GetUserRequest {}
+
+message GetUserResponse {
+    string email = 1;
+}
