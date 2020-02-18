@@ -22,6 +22,9 @@ func (s Server) ListCats(ctx context.Context, req *api.ListCatsRequest) (*api.Li
 			{
 				Name: "Olive",
 			},
+			{
+				Name: "Lara",
+			},
 		},
 	}, nil
 }
@@ -34,6 +37,9 @@ func (s Server) GetFeaturedCats(ctx context.Context, req *api.GetFeaturedCatsReq
 			},
 			{
 				Name: "Olive",
+			},
+			{
+				Name: "Lara",
 			},
 		},
 	}, nil

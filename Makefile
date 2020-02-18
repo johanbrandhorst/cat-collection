@@ -1,3 +1,6 @@
+dev: ui
+	go run main.go
+
 .PHONY: ui
 ui:
 	cd ui && npm run build
